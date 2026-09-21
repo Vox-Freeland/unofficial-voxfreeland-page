@@ -1,0 +1,7 @@
+CREATE TABLE subscribers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT NOT NULL UNIQUE,
+  favorite_book TEXT,
+  found_secret_room BOOLEAN DEFAULT 0,
+  signed_up_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
