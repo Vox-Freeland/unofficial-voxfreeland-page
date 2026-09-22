@@ -42,6 +42,7 @@ export default function About() {
         <h2>Creative Interests</h2>
         <ul className="settling-list">
           <li>Literary &amp; contemporary fiction</li>
+          <li>Science fiction and fantasy</li>
           <li>Psychological drama</li>
           <li>Screenwriting &amp; playwriting</li>
           <li>Character-driven storytelling</li>
