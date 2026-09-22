@@ -17,7 +17,7 @@ export default function About() {
       </section>
 
       <section className="world-section">
-        <h2>Writing Strengths</h2>
+        <h2>Background</h2>
         <div className="card-grid">
           <div className="book-card">
             <h3>Storytelling &amp; Structure</h3>
