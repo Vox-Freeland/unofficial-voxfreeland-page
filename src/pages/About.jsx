@@ -72,6 +72,16 @@ export default function About() {
           Azada Chronicles.
         </p>
       </section>
+
+      <section className="world-section">
+        <h2>Contact</h2>
+        <p className="world-intro">
+          For inquiries, reach out at{' '}
+          <a href="mailto:voxfreeland@gmail.com" className="contact-email">
+            voxfreeland@gmail.com
+          </a>.
+        </p>
+      </section>
     </div>
   );
 }

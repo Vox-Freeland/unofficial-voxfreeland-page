@@ -1,4 +1,32 @@
 import azadaMap from '../assets/images/azada-map.jpg';
+import BookCard from '../components/BookCard';
+
+const books = [
+  {
+    title: 'THE AZADA CHRONICLES BOOK 1: Songs From Earth',
+    shortTitle: 'Songs From Earth',
+    tagline: null,
+    cover: null,
+    amazonLink: null, // add when live in a couple weeks
+    status: 'preorder',
+  },
+  {
+    title: 'THE AZADA CHRONICLES BOOK 2: The Gathering Storm',
+    shortTitle: 'The Gathering Storm',
+    tagline: null,
+    cover: null,
+    amazonLink: null,
+    status: 'upcoming',
+  },
+  {
+    title: 'THE AZADA CHRONICLES BOOK 3: The Azadan World War',
+    shortTitle: 'The Azadan World War',
+    tagline: null,
+    cover: null,
+    amazonLink: null,
+    status: 'upcoming',
+  },
+];
 
 export default function Trilogy() {
   return (
@@ -31,6 +59,12 @@ export default function Trilogy() {
           className="azada-map"
         />
         <p className="map-caption">The Realm of Azada</p>
+      </div>
+
+      <div className="card-grid">
+        {books.map((book) => (
+          <BookCard key={book.title} {...book} />
+        ))}
       </div>
     </div>
   );

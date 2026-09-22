@@ -314,6 +314,44 @@ img, video {
   transform: translateY(-2px);
 }
 
+/* -------------------- Book Cover Placeholder (BookCard) -------------------- */
+.book-card-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(212, 175, 55, 0.25);
+}
+
+.book-card-cover-placeholder span {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7d7871;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* -------------------- Buy Button Disabled (BookCard) -------------------- */
+.buy-button-disabled {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: #7d7871;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 4px;
+  cursor: not-allowed;
+}
+
 /* -------------------- CharacterCard sub-elements -------------------- */
 .character-card-img {
   width: 140px;
