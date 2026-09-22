@@ -23,7 +23,7 @@ export default function SecretRoom() {
         </p>
 
         <p>
-          Read together, these three ledgers argue that the American story
+          Read together, these three plays argue that the American story
           has never been finished — and never once let its people stop
           choosing, scene by scene, which version of the country they're
           willing to build.

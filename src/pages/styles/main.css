@@ -89,7 +89,7 @@ img, video {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.5) saturate(1.1);
+  filter: brightness(0.55) saturate(1.1);
 }
 
 .hero-text {
@@ -202,6 +202,16 @@ img, video {
   color: #c9c2ba;
 }
 
+/* -------------------- Book Cover Image (BookCard) -------------------- */
+.book-card-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -251,6 +261,8 @@ img, video {
   justify-content: center;
   text-align: center;
   padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .secret-room h1 {
@@ -304,9 +316,13 @@ img, video {
 
 /* -------------------- CharacterCard sub-elements -------------------- */
 .character-card-img {
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
   filter: saturate(0.9) contrast(1.05);
+  border: 2px solid rgba(212, 175, 55, 0.3);
 }
 
 .character-card-name {
@@ -394,6 +410,7 @@ img, video {
     font-size: 1.75rem;
   }
 }
+
 .secret-room .exit-link {
   margin-top: 3rem;
   color: #6f6656;
@@ -405,6 +422,7 @@ img, video {
 .secret-room .exit-link:hover {
   color: #c9a24b;
 }
+
 .secret-room::before {
   content: "";
   position: absolute;
@@ -418,6 +436,7 @@ img, video {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
+
 .secret-room-subtitle {
   font-family: sans-serif;
   font-size: 0.9rem;
@@ -426,19 +445,7 @@ img, video {
   color: #a89f95;
   margin-bottom: 1.5rem;
 }
-.secret-room {
-  min-height: 100vh;
-  background-color: #05050a;
-  background-image: radial-gradient(circle at center, #1a0e2e 0%, #05050a 80%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3rem 1.5rem;
-  position: relative;   /* add */
-  overflow: hidden;     /* add */
-}
+
 /* -------------------- Trilogy Synopsis -------------------- */
 .trilogy-synopsis {
   max-width: 720px;
