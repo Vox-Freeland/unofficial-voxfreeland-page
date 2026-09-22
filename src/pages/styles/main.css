@@ -394,3 +394,149 @@ img, video {
     font-size: 1.75rem;
   }
 }
+.secret-room .exit-link {
+  margin-top: 3rem;
+  color: #6f6656;
+  text-decoration: none;
+  border-bottom: 1px dashed #6f6656;
+  transition: color 0.3s ease;
+}
+
+.secret-room .exit-link:hover {
+  color: #c9a24b;
+}
+.secret-room::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-radial-gradient(circle, rgba(201,162,75,0.03) 0px, transparent 2px);
+  animation: flicker 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.secret-room-subtitle {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a89f95;
+  margin-bottom: 1.5rem;
+}
+.secret-room {
+  min-height: 100vh;
+  background-color: #05050a;
+  background-image: radial-gradient(circle at center, #1a0e2e 0%, #05050a 80%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  position: relative;   /* add */
+  overflow: hidden;     /* add */
+}
+/* -------------------- Trilogy Synopsis -------------------- */
+.trilogy-synopsis {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.trilogy-synopsis p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #c9c2ba;
+  margin-bottom: 1.25rem;
+}
+
+.trilogy-hook {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #d4af37;
+  margin-bottom: 1.5rem !important;
+}
+
+/* -------------------- Azada Map -------------------- */
+.azada-map-wrapper {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.azada-map {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.map-caption {
+  margin-top: 0.75rem;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7d7871;
+}
+
+/* -------------------- World Page Sections -------------------- */
+.world-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.world-section h2 {
+  font-size: 1.5rem;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.world-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #c9c2ba;
+  text-align: center;
+}
+
+.rebel-note {
+  max-width: 640px;
+  margin: 2rem auto 0;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #a89f95;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.settling-list {
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  padding-left: 1.25rem;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #c9c2ba;
+}
+
+.settling-list li {
+  margin-bottom: 0.5rem;
+}
+
+.settling-list strong {
+  color: #d4af37;
+}
