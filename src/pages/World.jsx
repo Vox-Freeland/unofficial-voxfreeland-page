@@ -10,7 +10,7 @@ export default function World() {
         <p className="world-intro">
           Azada is reached from Earth through a portal torn open by generations of
           meditating monks in Tebett. At its heart lies the Deadlands — a scorched,
-          Mad-Max-style expanse the size of Texas, unnaturally hot, and claimed by
+          Mad-Max-style expanse with hostile terrain, and claimed by
           two warring clans who answer to no king.
         </p>
       </section>
