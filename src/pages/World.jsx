@@ -32,7 +32,7 @@ export default function World() {
           </div>
           <div className="book-card">
             <h3>Mekhu</h3>
-            <p>A northern Greek-inspired land controlled through it's religious hub, Adelfi, seat of the Antholic Church and its Templar Knights, though it's capital lies in Theron.</p>
+            <p>A northern Greek-inspired land controlled through its religious hub, Adelfi, seat of the Antholic Church and its Templar Knights, though it's capital lies in Theron.</p>
           </div>
           <div className="book-card">
             <h3>Grecca</h3>
