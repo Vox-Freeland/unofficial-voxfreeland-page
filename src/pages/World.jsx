@@ -1,6 +1,25 @@
+import { useEffect } from 'react';
 import azadaMap from '../assets/images/azada-map.jpg';
 
 export default function World() {
+  useEffect(() => {
+    // Remove any existing tiktok script so we can force a fresh reload/reprocess
+    const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://www.tiktok.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up when leaving the page
+      script.remove();
+    };
+  }, []);
+
   return (
     <div className="page page-world">
       <h1>The World of Azada</h1>
@@ -126,6 +145,65 @@ export default function World() {
           <li><strong>Vampires</strong> — settle at 30, aging slower than the Jipsu but faster than true elves. Capped near 2,000 years.</li>
           <li><strong>True elves</strong> — settle at 30, then age slowest of all. Lifespan of roughly 4,000 years.</li>
         </ul>
+      </section>
+
+      <section className="world-section">
+        <h2>World Videos</h2>
+        <div className="tiktok-video-grid">
+          <blockquote
+            className="tiktok-embed"
+            cite="https://www.tiktok.com/@realmbender6/video/7689451181151718670"
+            data-video-id="7689451181151718670"
+            style={{ maxWidth: '605px', minWidth: '325px' }}
+          >
+            <section>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                title="@realmbender6"
+                href="https://www.tiktok.com/@realmbender6?refer=embed"
+              >
+                @realmbender6
+              </a>
+              <p>Watch on TikTok</p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                title="realmbender6"
+                href="https://www.tiktok.com/@realmbender6/video/7689451181151718670"
+              >
+                View original video
+              </a>
+            </section>
+          </blockquote>
+
+          <blockquote
+            className="tiktok-embed"
+            cite="https://www.tiktok.com/@realmbender6/video/7689174379481058573"
+            data-video-id="7689174379481058573"
+            style={{ maxWidth: '605px', minWidth: '325px' }}
+          >
+            <section>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                title="@realmbender6"
+                href="https://www.tiktok.com/@realmbender6?refer=embed"
+              >
+                @realmbender6
+              </a>
+              <p>Watch on TikTok</p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                title="realmbender6"
+                href="https://www.tiktok.com/@realmbender6/video/7689174379481058573"
+              >
+                View original video
+              </a>
+            </section>
+          </blockquote>
+        </div>
       </section>
     </div>
   );
