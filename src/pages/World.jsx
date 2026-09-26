@@ -152,8 +152,8 @@ export default function World() {
         <div className="tiktok-video-grid">
           <blockquote
             className="tiktok-embed"
-            cite="https://www.tiktok.com/@realmbender6/video/7689451181151718670"
-            data-video-id="7689451181151718670"
+            cite="https://www.tiktok.com/@realmbender6/video/7689836826214944014"
+            data-video-id="7689836826214944014"
             style={{ maxWidth: '605px', minWidth: '325px' }}
           >
             <section>
@@ -170,7 +170,7 @@ export default function World() {
                 target="_blank"
                 rel="noreferrer"
                 title="realmbender6"
-                href="https://www.tiktok.com/@realmbender6/video/7689451181151718670"
+                href="https://www.tiktok.com/@realmbender6/video/7689836826214944014"
               >
                 View original video
               </a>
