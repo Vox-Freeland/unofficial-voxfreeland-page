@@ -140,10 +140,10 @@ export default function World() {
         </p>
         <ul className="settling-list">
           <li><strong>Humans</strong> — no settling; aging never slows.</li>
-          <li><strong>Jipsu witches</strong> — settle at 30, then age slowly. Lifespan of roughly 500 years.</li>
-          <li><strong>Frihettians</strong> — settle at 30, aging at the same slow rate as the Jipsu. Lifespan of roughly 500 years.</li>
-          <li><strong>Vampires</strong> — settle at 30, aging slower than the Jipsu but faster than true elves. Capped near 2,000 years.</li>
-          <li><strong>True elves</strong> — settle at 30, then age slowest of all. Lifespan of roughly 4,000 years.</li>
+          <li><strong>Jipsu witches</strong> — settle in their 30s, then age slowly. Lifespan of roughly 500 years.</li>
+          <li><strong>Frihettians</strong> — settle in their 30s, aging at the same slow rate as the Jipsu. Lifespan of roughly 500 years.</li>
+          <li><strong>Vampires</strong> — settle in their 30s, aging slower than the Jipsu but faster than true elves. Capped near 2,000 years.</li>
+          <li><strong>True elves</strong> — settle in their 30s, then age slowest of all. Lifespan of roughly 4,000 years.</li>
         </ul>
       </section>
 
