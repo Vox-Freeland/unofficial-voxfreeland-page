@@ -2,7 +2,7 @@
    main.css — Vox Freeland Fan Site
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
 
 /* -------------------- Reset / Base -------------------- */
 * {
@@ -11,10 +11,11 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background-color: #0b0b12;
   color: #e8e0d8;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   scroll-behavior: smooth;
 }
 
@@ -23,7 +24,8 @@ a {
   text-decoration: none;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   display: block;
 }
@@ -117,7 +119,7 @@ img, video {
 .cta-button {
   display: inline-block;
   padding: 0.85rem 2rem;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -127,7 +129,9 @@ img, video {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .cta-button:hover {
@@ -145,14 +149,18 @@ img, video {
   margin: 3rem auto;
   font-size: 40px;
   cursor: pointer;
-  filter: drop-shadow(0 0 6px #d4af37) drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px #d4af37)
+    drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
   user-select: none;
 }
 
 .hidden-sigil:hover {
   transform: scale(1.15) rotate(3deg);
-  filter: drop-shadow(0 0 10px #d4af37) drop-shadow(0 0 20px rgba(212, 175, 55, 0.7));
+  filter: drop-shadow(0 0 10px #d4af37)
+    drop-shadow(0 0 20px rgba(212, 175, 55, 0.7));
 }
 
 /* -------------------- Disclaimer -------------------- */
@@ -175,7 +183,9 @@ img, video {
   border: 1px solid rgba(212, 175, 55, 0.15);
   border-radius: 8px;
   padding: 1.5rem;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .book-card:hover,
@@ -230,7 +240,7 @@ img, video {
   border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 
-.newsletter input[type='email'] {
+.newsletter input[type="email"] {
   padding: 0.65rem 1rem;
   border-radius: 4px;
   border: 1px solid rgba(212, 175, 55, 0.3);
@@ -300,13 +310,15 @@ img, video {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
   color: #0b0b12;
   background: #d4af37;
   border-radius: 4px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .buy-button:hover {
@@ -342,7 +354,7 @@ img, video {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
   color: #7d7871;
@@ -396,7 +408,7 @@ img, video {
 
 .newsletter-form button {
   padding: 0.65rem 1.4rem;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 0.9rem;
   color: #fff;
   background: linear-gradient(90deg, #d4af37, #7a1f2b);
@@ -424,7 +436,9 @@ img, video {
   font-size: 0.9rem;
   color: #c9c2ba;
   border-bottom: 1px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .social-links a:hover {
@@ -465,14 +479,23 @@ img, video {
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-radial-gradient(circle, rgba(201,162,75,0.03) 0px, transparent 2px);
+  background: repeating-radial-gradient(
+    circle,
+    rgba(201, 162, 75, 0.03) 0px,
+    transparent 2px
+  );
   animation: flicker 6s infinite ease-in-out;
   pointer-events: none;
 }
 
 @keyframes flicker {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .secret-room-subtitle {
@@ -501,7 +524,7 @@ img, video {
 }
 
 .trilogy-hook {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 1.15rem;
   font-style: italic;
   color: #d4af37;
@@ -560,7 +583,7 @@ img, video {
 .rebel-note {
   max-width: 640px;
   margin: 2rem auto 0;
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-style: italic;
   font-size: 0.95rem;
   color: #a89f95;
@@ -584,4 +607,59 @@ img, video {
 
 .settling-list strong {
   color: #d4af37;
+}
+.profile-group {
+  margin-top: 2.5rem;
+}
+.profile-group-title {
+  margin-bottom: 0.25rem;
+}
+.profile-group-intro {
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+.profile-download {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.profile-card {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.profile-card figcaption {
+  padding: 0.75rem 1rem 1rem;
+}
+.profile-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+.profile-card p {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.profile-title {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.profile-card--wide {
+  grid-column: 1 / -1;
 }
