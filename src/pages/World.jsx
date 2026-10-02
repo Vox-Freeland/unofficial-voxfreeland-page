@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import azadaMap from '../assets/images/azada-map.jpg';
 
 import characters from '../data/characters.json';
@@ -29,23 +28,8 @@ function ProfileCard({ item }) {
 }
 
 export default function World() {
-  useEffect(() => {
-    // Remove any existing tiktok script so we can force a fresh reload/reprocess
-    const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    const script = document.createElement('script');
-    script.src = 'https://www.tiktok.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Clean up when leaving the page
-      script.remove();
-    };
-  }, []);
+  const worldVideoSrc = `${import.meta.env.BASE_URL}videos/world.mp4`;
+  const worldVideo2Src = `${import.meta.env.BASE_URL}videos/world2.mp4`;
 
   return (
     <div className="page page-world">
@@ -185,77 +169,33 @@ export default function World() {
       </section>
 
       <section className="world-section">
-        <h2>Faces of Azada</h2>
-        <p className="world-intro">
-          Portraits and scenes from across the realm, gathered by land and people.
-        </p>
-        <h3 className="profile-group-title">Characters</h3>
-        <div className="profile-grid">
-          {portraits.map((c) => <ProfileCard item={c} key={c.id} />)}
-        </div>
-
-        <h3 className="profile-group-title">Scenes</h3>
-        <div className="profile-grid">
-          {scenes.map((c) => <ProfileCard item={c} key={c.id} />)}
-        </div>
-      </section>
-
-      <section className="world-section">
         <h2>World Videos</h2>
         <div className="tiktok-video-grid">
-          <blockquote
-            className="tiktok-embed"
-            cite="https://www.tiktok.com/@realmbender6/video/7689836826214944014"
-            data-video-id="7689836826214944014"
-            style={{ maxWidth: '605px', minWidth: '325px' }}
+          <video
+            className="world-video"
+            controls
+            playsInline
+            preload="metadata"
+            onError={(e) =>
+              console.error('world.mp4 failed to load. Attempted URL:', worldVideoSrc, e.currentTarget.error)
+            }
           >
-            <section>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                title="@realmbender6"
-                href="https://www.tiktok.com/@realmbender6?refer=embed"
-              >
-                @realmbender6
-              </a>
-              <p>Watch on TikTok</p>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                title="realmbender6"
-                href="https://www.tiktok.com/@realmbender6/video/7689836826214944014"
-              >
-                View original video
-              </a>
-            </section>
-          </blockquote>
+            <source src={worldVideoSrc} type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
 
-          <blockquote
-            className="tiktok-embed"
-            cite="https://www.tiktok.com/@realmbender6/video/7689174379481058573"
-            data-video-id="7689174379481058573"
-            style={{ maxWidth: '605px', minWidth: '325px' }}
+          <video
+            className="world-video"
+            controls
+            playsInline
+            preload="metadata"
+            onError={(e) =>
+              console.error('world2.mp4 failed to load. Attempted URL:', worldVideo2Src, e.currentTarget.error)
+            }
           >
-            <section>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                title="@realmbender6"
-                href="https://www.tiktok.com/@realmbender6?refer=embed"
-              >
-                @realmbender6
-              </a>
-              <p>Watch on TikTok</p>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                title="realmbender6"
-                href="https://www.tiktok.com/@realmbender6/video/7689174379481058573"
-              >
-                View original video
-              </a>
-            </section>
-          </blockquote>
+            <source src={worldVideo2Src} type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
         </div>
       </section>
     </div>
