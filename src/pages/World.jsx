@@ -1,31 +1,36 @@
 import { useEffect } from 'react';
 import azadaMap from '../assets/images/azada-map.jpg';
 
-import p01 from '../assets/images/world/profile-01.jpg';
-import p02 from '../assets/images/world/profile-02.jpg';
-import p03 from '../assets/images/world/profile-03.jpg';
-import p04 from '../assets/images/world/profile-04.jpg';
-import p05 from '../assets/images/world/profile-05.jpg';
-import p06 from '../assets/images/world/profile-06.jpg';
-import p07 from '../assets/images/world/profile-07.jpg';
-import p08 from '../assets/images/world/profile-08.jpg';
-import p09 from '../assets/images/world/profile-09.jpg';
-import p10 from '../assets/images/world/profile-10.jpg';
-import p11 from '../assets/images/world/profile-11.jpg';
-import p12 from '../assets/images/world/profile-12.jpg';
-import p13 from '../assets/images/world/profile-13.jpg';
-import p14 from '../assets/images/world/profile-14.jpg';
-import p15 from '../assets/images/world/profile-15.jpg';
-import p16 from '../assets/images/world/profile-16.jpg';
-import p17 from '../assets/images/world/profile-17.jpg';
-import p18 from '../assets/images/world/profile-18.jpg';
-import p19 from '../assets/images/world/profile-19.jpg';
-import p20 from '../assets/images/world/profile-20.jpg';
-import p21 from '../assets/images/world/profile-21.jpg';
-import p22 from '../assets/images/world/profile-22.jpg';
-import p23 from '../assets/images/world/profile-23.jpg';
-import p24 from '../assets/images/world/profile-24.jpg';
-import p25 from '../assets/images/world/profile-25.jpg';
+// ---- Compressed images (src/assets/images/world/compressed/) ----
+import p01 from '../assets/images/world/compressed/profile-01.jpg';
+import p02 from '../assets/images/world/compressed/profile-02.jpg';
+import p03 from '../assets/images/world/compressed/profile-03.jpg';
+import p05 from '../assets/images/world/compressed/profile-05.jpg';
+import p06 from '../assets/images/world/compressed/profile-06.jpg';
+import p07 from '../assets/images/world/compressed/profile-07.jpg';
+import p08 from '../assets/images/world/compressed/profile-08.jpg';
+import p09 from '../assets/images/world/compressed/profile-09.jpg';
+import p10 from '../assets/images/world/compressed/profile-10.jpg';
+import p11 from '../assets/images/world/compressed/profile-11.jpg';
+import p12 from '../assets/images/world/compressed/profile-12.jpg';
+import p13 from '../assets/images/world/compressed/profile-13.jpg';
+import p14 from '../assets/images/world/compressed/profile-14.jpg';
+import p15 from '../assets/images/world/compressed/profile-15.jpg';
+import p16 from '../assets/images/world/compressed/profile-16.jpg';
+import p18 from '../assets/images/world/compressed/profile-18.jpg';
+import p20 from '../assets/images/world/compressed/profile-20.jpg';
+import p21 from '../assets/images/world/compressed/profile-21.jpg';
+import p22 from '../assets/images/world/compressed/profile-22.jpg';
+import p23 from '../assets/images/world/compressed/profile-23.jpg';
+import p25 from '../assets/images/world/compressed/profile-25.jpg';
+import p26 from '../assets/images/world/compressed/profile-26.jpg';
+
+// ---- Originals (no compressed version yet) ----
+import p04 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-04
+import p17 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-17
+import p19 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-19
+import p24 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-24
+
 
 /*
   EDIT ME: add each character's real name in `name` and a short line in `note`.
@@ -42,6 +47,7 @@ const profileGroups = [
       { img: p15, title: 'SEREN', name: '', note: '', alt: 'Crystalline, fractured AI figure surrounded by server stacks' },
       { img: p11, title: 'A Selenai Assassin', name: '', note: '', alt: 'White-haired half-machine assassin with blade arms in a tiled hall' },
       { img: p21, title: 'The Captive', name: '', note: '', alt: 'A bound white-haired Selenai being studied by a long-haired golden-blond man', wide: true },
+      { img: p26, title: 'The Captive — Close Up', name: '', note: '', alt: 'A long-haired golden-blond man leaning over a captive held in iron cuffs and a chain', wide: true },
     ],
   },
   {
