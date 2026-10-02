@@ -162,7 +162,7 @@ export default function World() {
             loading="lazy"
           />
           <figcaption>
-            <h3>Crossing Back to Earth</h3>
+            <h3>The Visit to Earth</h3>
           </figcaption>
         </figure>
       </section>
