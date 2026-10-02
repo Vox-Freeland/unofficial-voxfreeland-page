@@ -1,130 +1,28 @@
 import { useEffect } from 'react';
 import azadaMap from '../assets/images/azada-map.jpg';
 
-// ---- Compressed images (src/assets/images/world/compressed/) ----
-import p01 from '../assets/images/world/compressed/profile-01.jpg';
-import p02 from '../assets/images/world/compressed/profile-02.jpg';
-import p03 from '../assets/images/world/compressed/profile-03.jpg';
-import p05 from '../assets/images/world/compressed/profile-05.jpg';
-import p06 from '../assets/images/world/compressed/profile-06.jpg';
-import p07 from '../assets/images/world/compressed/profile-07.jpg';
-import p08 from '../assets/images/world/compressed/profile-08.jpg';
-import p09 from '../assets/images/world/compressed/profile-09.jpg';
-import p10 from '../assets/images/world/compressed/profile-10.jpg';
-import p11 from '../assets/images/world/compressed/profile-11.jpg';
-import p12 from '../assets/images/world/compressed/profile-12.jpg';
-import p13 from '../assets/images/world/compressed/profile-13.jpg';
-import p14 from '../assets/images/world/compressed/profile-14.jpg';
-import p15 from '../assets/images/world/compressed/profile-15.jpg';
-import p16 from '../assets/images/world/compressed/profile-16.jpg';
-import p18 from '../assets/images/world/compressed/profile-18.jpg';
-import p20 from '../assets/images/world/compressed/profile-20.jpg';
-import p21 from '../assets/images/world/compressed/profile-21.jpg';
-import p22 from '../assets/images/world/compressed/profile-22.jpg';
-import p23 from '../assets/images/world/compressed/profile-23.jpg';
-import p25 from '../assets/images/world/compressed/profile-25.jpg';
-import p26 from '../assets/images/world/compressed/profile-26.jpg';
+import characters from '../data/characters.json';
 
-// ---- Originals (no compressed version yet) ----
-import p04 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-04
-import p17 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-17
-import p19 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-19
-import p24 from '../assets/images/world/compressed/profile-01.jpg'; // TODO: real profile-24
+// Vite bundles every file in the folder and gives us a URL for each
+const images = import.meta.glob('../assets/characters/*.jpg', {
+  eager: true,
+  import: 'default',
+});
+const imgFor = (file) => images['../assets/characters/' + file];
 
+const portraits = characters.filter((c) => c.type === 'character');
+// earth-visit is shown in "The Fall Summit & The Earth Journey" instead
+const scenes = characters.filter((c) => c.type === 'scene' && c.id !== 'earth-visit');
 
-/*
-  EDIT ME: add each character's real name in `name` and a short line in `note`.
-  `title` is a descriptive placeholder shown when `name` is empty.
-  `wide: true` makes the card span the full row (for scene art).
-*/
-const profileGroups = [
-  {
-    id: 'attaka',
-    heading: 'Attaka — The Regime',
-    intro: 'Ruthless technology wrapped in ancient Turkish-inspired architecture.',
-    profiles: [
-      { img: p12, title: 'The Tech Lord', name: '', note: '', alt: 'Dark-haired man with glowing circuit-lit eyes and a circuit-patterned collar' },
-      { img: p15, title: 'SEREN', name: '', note: '', alt: 'Crystalline, fractured AI figure surrounded by server stacks' },
-      { img: p11, title: 'A Selenai Assassin', name: '', note: '', alt: 'White-haired half-machine assassin with blade arms in a tiled hall' },
-      { img: p21, title: 'The Captive', name: '', note: '', alt: 'A bound white-haired Selenai being studied by a long-haired golden-blond man', wide: true },
-      { img: p26, title: 'The Captive — Close Up', name: '', note: '', alt: 'A long-haired golden-blond man leaning over a captive held in iron cuffs and a chain', wide: true },
-    ],
-  },
-  {
-    id: 'tebett',
-    heading: 'Tebett — The Sanctuary',
-    intro: 'Highland monasteries, prayer flags, and the monks who opened the portal.',
-    profiles: [
-      { img: p04, title: 'The Elder Monk', name: '', note: '', alt: 'Elderly bald monk with a white beard and wooden prayer beads' },
-      { img: p06, title: 'The Young Seeker', name: '', note: '', alt: 'Freckled young woman with a long braid beneath prayer flags' },
-      { img: p23, title: 'Flight Through the Monastery', name: '', note: '', alt: 'Woman and a boy racing through a snowy Tebett courtyard as monks rush past', wide: true },
-    ],
-  },
-  {
-    id: 'mekhu',
-    heading: 'Mekhu — The Church & The Templars',
-    intro: 'Greek-inspired lands ruled through the Antholic Church and its knights.',
-    profiles: [
-      { img: p02, title: 'The Crowned Churchman', name: '', note: '', alt: 'Pale, dark-haired man in a spiked iron crown and black-and-purple vestments' },
-      { img: p25, title: 'The Templar Knight', name: '', note: '', alt: 'Red-haired knight in laurel-and-cross armor overlooking a vineyard' },
-      { img: p24, title: 'The Soldier & The Wanderer', name: '', note: '', alt: 'A soldier marked VIII examining a satchel beside a red-haired woman', wide: true },
-    ],
-  },
-  {
-    id: 'frihett',
-    heading: 'Frihett & The Elves',
-    intro: 'A Viking-elf bloodline of storm, fur, and spirit animals.',
-    profiles: [
-      { img: p03, title: 'The One-Eyed Warrior', name: '', note: '', alt: 'Scarred, eye-patched woman in fur and leather before a snowy fjord village' },
-      { img: p05, title: 'The Braided Elf-Lord', name: '', note: '', alt: 'Blond, blue-eyed elf with a braided beard in rune-etched armor' },
-      { img: p09, title: 'The Storm-Coast Hunter', name: '', note: '', alt: 'Scarred, grey-eyed man in furs before a stormy coast' },
-      { img: p08, title: 'The Fjord Matriarch', name: '', note: '', alt: 'Violet-eyed elf woman in braids and furs above a misty fjord' },
-      { img: p07, title: 'The Forest Elf', name: '', note: '', alt: 'Long-haired blond elf clad in moss, twigs, and oak leaves' },
-      { img: p22, title: 'Camp Beneath the Mountains', name: '', note: '', alt: 'Eye-patched warrior and a pale elf woman beside a Frihettian war camp', wide: true },
-    ],
-  },
-  {
-    id: 'deadlands',
-    heading: 'The Deadlands — Verdani & Vikru',
-    intro: 'Vampires and cannibal clans fighting over scorched, bone-strewn badlands.',
-    profiles: [
-      { img: p01, title: 'The Golden-Haired Verdani', name: '', note: '', alt: 'Long-haired golden-blond man in a rune-embroidered black coat in torchlit ruins' },
-      { img: p19, title: 'The Crowned Rune-Witch', name: '', note: '', alt: 'Silver-streaked woman in a horned, rune-etched crown wreathed in violet sigils' },
-      { img: p18, title: 'Verdani vs. Vikru', name: '', note: '', alt: 'Vampires and tribal warriors clashing with glowing sigils in the desert', wide: true },
-    ],
-  },
-  {
-    id: 'grecca',
-    heading: 'Grecca — The Jipsu',
-    intro: 'Sun-baked Mediterranean witch clans and their wandering kin.',
-    profiles: [
-      { img: p10, title: 'The Grinning Wanderer', name: '', note: '', alt: 'Smiling white-blond man with hoop earrings and a moon pendant in a desert' },
-      { img: p14, title: 'The Green-Eyed Rogue', name: '', note: '', alt: 'Black-haired, green-eyed man with a sly smile and bone charms' },
-      { img: p20, title: 'The Twin Tides Council', name: '', note: '', alt: 'Three companions studying a Twin Tides scroll beneath two moons', wide: true },
-    ],
-  },
-  {
-    id: 'ubuntu',
-    heading: 'The Ubuntu Tribe',
-    intro: 'Their music carries a frequency that weakens SEREN itself.',
-    profiles: [
-      { img: p13, title: 'Noma', name: 'Noma', note: 'Leader of the Ubuntu tribe.', alt: 'Older woman in beads and feathers wreathed in golden sound waves' },
-      { img: p17, title: 'The Drum Circle', name: '', note: '', alt: 'Ubuntu elders drumming and singing around a fire, sound rippling through the air', wide: true },
-    ],
-  },
-];
-
-function ProfileCard({ profile }) {
-  const heading = profile.name || profile.title;
+function ProfileCard({ item }) {
+  const alt = item.alt || [item.name, item.title].filter(Boolean).join(' — ');
   return (
-    <figure className={`profile-card${profile.wide ? ' profile-card--wide' : ''}`}>
-      <img src={profile.img} alt={profile.alt} loading="lazy" />
+    <figure className={`profile-card${item.type === 'scene' ? ' profile-card--wide' : ''}`}>
+      <img src={imgFor(item.image)} alt={alt} loading="lazy" />
       <figcaption>
-        <h3>{heading}</h3>
-        {profile.name && profile.title && profile.name !== profile.title && (
-          <span className="profile-title">{profile.title}</span>
-        )}
-        {profile.note && <p>{profile.note}</p>}
+        <h3>{item.name}</h3>
+        {item.title && <span className="profile-title">{item.title}</span>}
+        {item.note && <p>{item.note}</p>}
       </figcaption>
     </figure>
   );
@@ -259,7 +157,7 @@ export default function World() {
         </p>
         <figure className="profile-card profile-card--wide">
           <img
-            src={p16}
+            src={imgFor('earth-visit.jpg')}
             alt="Five travelers step out of a glowing rune portal onto a rain-slicked Earth highway"
             loading="lazy"
           />
@@ -291,23 +189,15 @@ export default function World() {
         <p className="world-intro">
           Portraits and scenes from across the realm, gathered by land and people.
         </p>
-        <p className="profile-download">
-          <a href="/downloads/azada-profiles.pdf" target="_blank" rel="noreferrer">
-            Download the full character profile PDF
-          </a>
-        </p>
+        <h3 className="profile-group-title">Characters</h3>
+        <div className="profile-grid">
+          {portraits.map((c) => <ProfileCard item={c} key={c.id} />)}
+        </div>
 
-        {profileGroups.map((group) => (
-          <div className="profile-group" key={group.id}>
-            <h3 className="profile-group-title">{group.heading}</h3>
-            {group.intro && <p className="profile-group-intro">{group.intro}</p>}
-            <div className="profile-grid">
-              {group.profiles.map((profile) => (
-                <ProfileCard profile={profile} key={profile.alt} />
-              ))}
-            </div>
-          </div>
-        ))}
+        <h3 className="profile-group-title">Scenes</h3>
+        <div className="profile-grid">
+          {scenes.map((c) => <ProfileCard item={c} key={c.id} />)}
+        </div>
       </section>
 
       <section className="world-section">
