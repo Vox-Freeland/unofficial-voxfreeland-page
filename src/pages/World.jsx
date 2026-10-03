@@ -12,9 +12,15 @@ const imgFor = (file) => images['../assets/characters/' + file];
 const portraits = characters.filter((c) => c.type === 'character');
 // earth-visit is shown in "The Fall Summit & The Earth Journey" instead
 const scenes = characters.filter((c) => c.type === 'scene' && c.id !== 'earth-visit');
+// The Rebel Witches are shown as a single consolidated group profile
+const rebelWitches = characters.find((c) => c.id === 'rebel-witches');
 
 function ProfileCard({ item }) {
   const alt = item.alt || [item.name, item.title].filter(Boolean).join(' — ');
+  const bioEntries = item.bio
+    ? item.bio.split('|').map((entry) => entry.trim()).filter(Boolean)
+    : [];
+
   return (
     <figure className={`profile-card${item.type === 'scene' ? ' profile-card--wide' : ''}`}>
       <img src={imgFor(item.image)} alt={alt} loading="lazy" />
@@ -22,6 +28,13 @@ function ProfileCard({ item }) {
         <h3>{item.name}</h3>
         {item.title && <span className="profile-title">{item.title}</span>}
         {item.note && <p>{item.note}</p>}
+        {bioEntries.length > 0 && (
+          <ul className="profile-bio-list">
+            {bioEntries.map((entry, i) => (
+              <li key={i}>{entry}</li>
+            ))}
+          </ul>
+        )}
       </figcaption>
     </figure>
   );
@@ -99,32 +112,11 @@ export default function World() {
 
       <section className="world-section">
         <h2>The Rebel Witches</h2>
-        <div className="card-grid">
-          <div className="book-card">
-            <h3>Orrin Vale</h3>
-            <p>The cell's quiet architect. Shadow-craft — weaving half-darkness to blur passage and bend perception.</p>
+        {rebelWitches && (
+          <div className="profile-grid profile-grid--single">
+            <ProfileCard item={rebelWitches} />
           </div>
-          <div className="book-card">
-            <h3>Kael Dryst</h3>
-            <p>Magnetic and sharp-eyed. Sound-sigil craft — shaping sound itself into force.</p>
-          </div>
-          <div className="book-card">
-            <h3>Dax Keth</h3>
-            <p>Wiry, quick, recklessly optimistic. Wind-run magic — bending air to carry whispers and plant suggestion.</p>
-          </div>
-          <div className="book-card">
-            <h3>Nyra Kesh</h3>
-            <p>Commanding and unafraid. Flame-lace magic — shaping heat and light into living forms.</p>
-          </div>
-          <div className="book-card">
-            <h3>Lynette Vell</h3>
-            <p>The group's quiet anchor. Moon-veil magic — reading unspoken needs and steering the moment.</p>
-          </div>
-          <div className="book-card">
-            <h3>Olivia Dessa</h3>
-            <p>Sea-ward magic — communing with tides and currents to shift momentum and mood.</p>
-          </div>
-        </div>
+        )}
         <p className="rebel-note">
           Six outcasts wielding shadow, sound, wind, flame, moonlight, and tide — proof that even the deepest tyranny cannot smother a spark of rebellion.
         </p>
