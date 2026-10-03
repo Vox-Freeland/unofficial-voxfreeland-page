@@ -177,7 +177,7 @@
     "name": "Freya, Byorn & Astrid",
     "title": "",
     "image": "freya-byorn-astrid.jpg",
-    "source": "Freya- Byorn - Astrid.jpg",
+    "source": "Freya- Byorn- Astrid.jpg",
     "type": "scene"
   },
   {
@@ -205,11 +205,11 @@
     "type": "scene"
   },
   {
-    "id": "sofia-and-ulysses",
-    "name": "Sofia & Ulysses",
+    "id": "ulysses-and-sofia",
+    "name": "Ulysses & Sofia",
     "title": "",
-    "image": "sofia-and-ulysses.jpg",
-    "source": "Sofia and Ulysses.jpg",
+    "image": "ulysses-and-sofia.jpg",
+    "source": "Ulysses and Sofia.jpg",
     "type": "scene"
   },
   {
