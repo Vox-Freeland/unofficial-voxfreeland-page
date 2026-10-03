@@ -9,7 +9,11 @@ const images = import.meta.glob('../assets/characters/*.jpg', {
 });
 const imgFor = (file) => images['../assets/characters/' + file];
 
-const portraits = characters.filter((c) => c.type === 'character');
+// Individual character portraits — excludes the consolidated rebel-witches
+// group entry, which is rendered separately in its own section below.
+const portraits = characters.filter(
+  (c) => c.type === 'character' && c.id !== 'rebel-witches'
+);
 // earth-visit is shown in "The Fall Summit & The Earth Journey" instead
 const scenes = characters.filter((c) => c.type === 'scene' && c.id !== 'earth-visit');
 // The Rebel Witches are shown as a single consolidated group profile
@@ -60,6 +64,15 @@ export default function World() {
 
       <section className="world-section">
         <img src={azadaMap} alt="Map of the Realm of Azada" className="world-map" />
+      </section>
+
+      <section className="world-section">
+        <h2>Character Portraits</h2>
+        <div className="profile-grid">
+          {portraits.map((item) => (
+            <ProfileCard key={item.id} item={item} />
+          ))}
+        </div>
       </section>
 
       <section className="world-section">
@@ -142,6 +155,17 @@ export default function World() {
           </figcaption>
         </figure>
       </section>
+
+      {scenes.length > 0 && (
+        <section className="world-section">
+          <h2>Key Scenes</h2>
+          <div className="profile-grid">
+            {scenes.map((item) => (
+              <ProfileCard key={item.id} item={item} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="world-section">
         <h2>The Settling — How Azada's Peoples Age</h2>
