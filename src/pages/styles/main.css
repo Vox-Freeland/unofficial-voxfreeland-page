@@ -649,10 +649,14 @@ video {
   margin: 0 0 0.25rem;
   font-size: 1.05rem;
 }
+
+/* All character image text descriptions (note text under the title)
+   are uniformly italicized to match .profile-title and .profile-bio-list li below. */
 .profile-card p {
   margin: 0.35rem 0 0;
   font-size: 0.9rem;
   opacity: 0.85;
+  font-style: italic;
 }
 .profile-title {
   font-size: 0.8rem;
@@ -680,6 +684,7 @@ video {
   color: #c9c2ba;
   padding-left: 1rem;
   border-left: 2px solid rgba(212, 175, 55, 0.3);
+  font-style: italic;
 }
 
 .profile-grid--single {

@@ -1,5 +1,4 @@
 import azadaMap from '../assets/images/azada-map.jpg';
-
 import characters from '../data/characters.json';
 
 // Vite bundles every file in the folder and gives us a URL for each
