@@ -48,8 +48,8 @@
     "type": "character"
   },
   {
-    "id": "evandyr-evan-starbringer",
-    "name": "Evandyr 'Evan' Starbringer",
+    "id": "evandyr-evan-starbrynger",
+    "name": "Evandyr \"Evan\" Starbrynger",
     "title": "Last Remaining Pure Elf Lord of Frihett",
     "image": "evandyr-evan-starbringer.jpg",
     "source": "Evandyr 'Evan' Starbringer- Last Remaining Pure Elf Lord of Frihett.jpg",
@@ -75,6 +75,7 @@
     "id": "jesper-abram",
     "name": "Jesper Abram",
     "title": "Greccan Jipsu Witch",
+    "note": "Distant cousin of Sofia and Rye — unwaveringly loyal",
     "image": "jesper-abram.jpg",
     "source": "Jesper Abram- Greccan Jipsu Witch.jpg",
     "type": "character"
@@ -105,8 +106,9 @@
   },
   {
     "id": "rye-gallagher",
-    "name": "Rye Gallagher",
+    "name": "Ryland \"Rye\" Gallagher",
     "title": "Greccan Jipsu Witch",
+    "note": "Maternal 1st cousin to Sofia with devastating powers of seduction and mimicry",
     "image": "rye-gallagher.jpg",
     "source": "Rye Gallagher- Greccan Jipsu Witch.jpg",
     "type": "character"
@@ -122,7 +124,8 @@
   {
     "id": "sofia",
     "name": "Sofia",
-    "title": "",
+    "title": "Grecca's Most Formidable Jipsu Witch",
+    "note": "Rye's maternal first cousin",
     "image": "sofia.jpg",
     "source": "Sofia_page-0001.jpg",
     "type": "character"
@@ -138,7 +141,7 @@
   {
     "id": "zahari",
     "name": "Zahari",
-    "title": "",
+    "title": "Grecca's Merciless Jipsu Witch Queen",
     "image": "zahari.jpg",
     "source": "Zahari_page-0001.jpg",
     "type": "character"
@@ -151,7 +154,7 @@
     "source": "Rebel Witches Group Photo.jpg",
     "type": "character",
     "faction": "rebel-witches",
-    "bio": "Kael Dryst — athletic, fair-skinned, loosely curled dark auburn hair, light-sapphire eyes. Sound-sigil magic shapes sound into physical force; quiet, magnetic charisma. | Nyra Kesh — tall, copper-skinned, brass-colored eyes, silky warm-black hair cut all one-length to the middle of her neck. Flame-lace magic shapes heat and light into living forms; commanding, unbending presence. | Orrin Vale — tall, lean, near-black eyes with clinical warmth. Shadow-craft magic weaves half-darkness, blurring passage and bending perception; the group's leader. | Dax Keth — wiry, quick, warm olive skin, dark sharp-green eyes, mischievous. Wind-run magic bends air and current to carry whispers and plant suggestions; agile, reckless optimism. | Lynette Vell — light-olive-skinned, dark-blond hair. Moon-veil magic is soft and reflective, reading unspoken needs and steering situations; the quiet anchor of the group. | Olivia Dessa — the youngest member, medium height, dark-skinned, black hair. Sea-ward magic communes with currents and tides, reading flow and shifting momentum and mood."
+    "bio": "Kael Dryst — Sound-sigil magic shapes sound into physical force; quiet, magnetic charisma. | Nyra Kesh — Flame-lace magic shapes heat and light into living forms; commanding, unbending presence. | Orrin Vale — Shadow-craft magic weaves half-darkness, blurring passage and bending perception; the group's leader. | Dax Keth — Wind-run magic bends air and current to carry whispers and plant suggestions; agile, reckless optimism. | Lynette Vell — Moon-veil magic is soft and reflective, reading unspoken needs and steering situations; the quiet anchor of the group. | Olivia Dessa — the youngest member. Sea-ward magic communes with currents and tides, reading flow and shifting momentum and mood."
   },
   {
     "id": "adolfus-kade-interrogation",
