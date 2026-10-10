@@ -19,7 +19,7 @@ const books = [
     status: 'upcoming',
   },
   {
-    title: 'THE AZADA CHRONICLES BOOK 3: Title TBD,
+    title: 'THE AZADA CHRONICLES BOOK 3: Title TBD',
     shortTitle: 'TBD',
     tagline: null,
     cover: null,
