@@ -3,24 +3,24 @@ import BookCard from '../components/BookCard';
 
 const books = [
   {
-    title: 'THE AZADA CHRONICLES BOOK 1: Songs From Earth',
-    shortTitle: 'Songs From Earth',
+    title: 'THE AZADA CHRONICLES BOOK 1: Attaka Rising',
+    shortTitle: 'Attaka Rising',
     tagline: null,
     cover: null,
     amazonLink: null, // add when live in a couple weeks
     status: 'preorder',
   },
   {
-    title: 'THE AZADA CHRONICLES BOOK 2: The Gathering Storm',
-    shortTitle: 'The Gathering Storm',
+    title: 'THE AZADA CHRONICLES BOOK 2: Songs From Earth',
+    shortTitle: 'Songs From Earth',
     tagline: null,
     cover: null,
     amazonLink: null,
     status: 'upcoming',
   },
   {
-    title: 'THE AZADA CHRONICLES BOOK 3: The Azadan World War',
-    shortTitle: 'The Azadan World War',
+    title: 'THE AZADA CHRONICLES BOOK 3: Title TBD,
+    shortTitle: 'TBD',
     tagline: null,
     cover: null,
     amazonLink: null,
