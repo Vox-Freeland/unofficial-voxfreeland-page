@@ -32,11 +32,11 @@
     "type": "character"
   },
   {
-    "id": "da'-lama-an-analog-in-tebett-azada",
-    "name": "Da' Lama",
+    "id": "kai-lama-an-analog-in-tebett-azada",
+    "name": "Kai Lama",
     "title": "An Analog in Tebett, Azada",
-    "image": "da'-lama-an-analog-in-tebett-azada.jpg",
-    "source": "Da' Lama (An Analog in Tebett, Azada).jpg",
+    "image": "kai-lama-an-analog-in-tebett-azada.jpg",
+    "source": "Kai Lama (An Analog in Tebett, Azada).jpg",
     "type": "character"
   },
   {
@@ -99,7 +99,7 @@
   {
     "id": "noma",
     "name": "Noma",
-    "title": "Wise and Gracious Ubuntu Tribe Leader from Earth whose Music Carries a Rare Frequency that can Compromise Minsk's AI",
+    "title": "Wise and Gracious Zuntu Tribe Leader from Earth whose Music (Ubuntu) qCarries a Rare Frequency that can Compromise Minsk's AI",
     "image": "noma.jpg",
     "source": "Noma- Wise and Gracious Ubuntu Tribe Leader from Earth whose Music Carries a Rare Frequency that can Compromise Minsk's AI.jpg",
     "type": "character"

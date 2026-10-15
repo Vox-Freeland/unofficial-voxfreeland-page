@@ -139,7 +139,7 @@ export default function World() {
         <p className="world-intro">
           As the free lands gather at the Tebett Fall Summit to strategize against
           Attaka, a small band crosses the portal back to Earth — and returns with
-          Noma, leader of the Ubuntu tribe, whose music carries a frequency that
+          Noma, leader of the Zuntu tribe, whose music (Ubuntu) carries a frequency that
           weakens SEREN itself. Combined with the ancient chants of the Tebett
           monks, it may be the only force powerful enough to shatter Minsk's grip.
         </p>
